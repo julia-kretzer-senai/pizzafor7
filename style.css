@@ -1,4 +1,7 @@
+/* fontes e variáveis de cor */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
 
 :root {
     --vermelhoclaro: #F3191A;
@@ -6,6 +9,8 @@
     --vermelhoescuro: #901117;
     --amarelo: #ffca08;
 }
+
+/* todas as páginas */
 
 * {
     margin: 0;
@@ -122,9 +127,26 @@ body {
 main {
     padding-top: 2%;
     background-image: url('background2.jpg');
-    /* background-repeat:repeat; */
     background-size: auto;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--vermelhoescuro);        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--vermelhoclaro);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 2px solid #000;  /* creates padding around scroll thumb */
+}
+
+
+
+/* index */
 
 #inicial-main {
     width: 100%;
@@ -162,7 +184,7 @@ main {
 
 .fundo {
     width: 75%;
-    height: 70%;
+    height: 60%;
     background-color: var(--vermelhomedio);
     margin: 5% 12.5% 0 12.5%;
     border-radius: 10px;
@@ -180,7 +202,7 @@ main {
 
 .texto {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 20px;
     color: white;
 }
 
@@ -222,6 +244,8 @@ main {
 #last {
     margin-right: 0;
 }
+
+/* contato */
 
 .fale-conosco {
     display: flex;
@@ -274,12 +298,6 @@ main {
     margin-left: 42.5%;
 }
 
-#code:hover {
-    cursor: pointer;
-    width: 18%;
-    margin-left: 41%;
-}
-
 #endereco {
     display: flex;
     flex-wrap: wrap;
@@ -290,6 +308,8 @@ main {
     width: 50%;
     margin-bottom: 10%;
 }
+
+/* cardapio */
 
 .main-cardapio {
     padding: 3%;
@@ -320,9 +340,10 @@ main {
     margin-left: 3%;
     width: 40%;
     height: 10%;
+    min-height: 80px;
     background-color: var(--vermelhomedio);
     color: white;
-    font-size: 10px;
+    font-size: 22px;
     text-align: center;
     padding: 1%;
     border: #000 solid 2px;
@@ -343,154 +364,9 @@ main {
     cursor: pointer;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-}
-  
-body::-webkit-scrollbar-track {
-    background: var(--vermelhoescuro);        /* color of the tracking area */
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: var(--vermelhoclaro);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 2px solid #000;  /* creates padding around scroll thumb */
-}
 
-.slider-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .slider {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    margin: 20px;
-    text-align: center;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slides {
-    display: flex;
-    overflow-x: scroll;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-  }
 
-  .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 100%;
-    height: 400px;
-    scroll-snap-align: center;
-    margin-right: 0px;
-    box-sizing: border-box;
-    transform-origin: center center;
-    transform: scale(1);
-  }
-  
-  .slide__text {
-    font-size: 40px;
-    font-weight: bold;
-    font-family: sans-serif;
-  }
-  
-  .slide a {
-    background: none;
-    border: none;
-  }
-  
-  a.slide__prev,
-  .slider::before {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    left: 5%;
-  }
-  
-  a.slide__next,
-  .slider::after {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    right: 5%;
-  }
-  
-  .slider::before,
-  .slider::after,
-  .slide__prev,
-  .slide__next {
-    position: absolute;
-    top: 48%;
-    width: 35px;
-    height: 35px;
-    border: solid black;
-    border-width: 0 4px 4px 0;
-    padding: 3px;
-    box-sizing: border-box;
-  }
-  
-  .slider::before,
-  .slider::after {
-    content: "";
-    z-index: 1;
-    background: none;
-    pointer-events: none;
-  }
-  
-  .slider__nav {
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    width: 200px;
-    margin-left: -100px;
-    text-align: center;
-  }
-  
-  .slider__navlink {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: black;
-    margin: 0 10px 0 10px;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  .read-article{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
-    color: #000;
-    background: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-family: arial;
-    text-decoration: none;
-    box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px -15px;
-  }
-  .read-article:hover{
-      background: #d5d5d5;
-      box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px 0px;
-  }
-  iframe[sandbox] .read-article{
-    display: none;
-  }
+/* novidades */
 
 #main-novidades {
     display: flex;
@@ -517,3 +393,63 @@ body::-webkit-scrollbar-thumb {
     font-weight: 600;
     color: #ffca08;
 }
+
+/* area restrita */
+
+#main-area {
+    display: flex;
+    text-align: center;
+}
+
+.login-fundo {
+    width: 30%;
+    margin-left: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--vermelhomedio);
+    border-radius: 10px;
+    padding: 2%;
+    border: solid black 2px;
+}
+
+.label {
+    width: 100%;
+    font-size: 33px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 3%;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px black;
+    margin-bottom: 5%;
+}
+
+.input::placeholder {
+    font-size: 25px;
+    color: darkgray;
+    padding: 5%;
+}
+
+#send {
+    width: 30%;
+    height: 50%;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: var(--vermelhoclaro);
+    color: white;
+    margin: 5% 34% 0 34%;
+    padding: 2.5% 1%;
+    border-radius: 10px;
+    border: solid 2px black
+}
+
+#send:hover {
+    background-color: var(--vermelhoescuro);
+    cursor: pointer;
+}
+
+
